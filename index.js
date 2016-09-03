@@ -23,6 +23,7 @@ function takeANumber(katzDeliLine, name){
 
 console.log(takeANumber(katzDeli, "Meisa"));
 console.log(takeANumber(katzDeli, "Nana"));
+console.log(takeANumber(katzDeli, "Emi"));
 
 
 //example:
@@ -31,6 +32,23 @@ takeANumber(katzDeliLine, "Grace"); // 2
 takeANumber(katzDeliLine, "Kent"); // 3*/
 
 /*2. Build a function `nowServing`. This function should return the next person in line and then remove them from the line. If there is nobody in line, it should return "There is nobody waiting to be served!"*/
+
+function nowServing(katzDeliLine){
+  if(katzDeliLine.length >=1){
+    return "Currently serving " + katzDeliLine.shift() + ". ";//shift() method removes the first element from an array an returns that element
+  }else{
+    return "There is nobody waiting to be served!";
+  }
+
+}
+
+console.log(nowServing(katzDeli)); //meisa
+console.log(nowServing(katzDeli)); // nana
+console.log(nowServing(katzDeli)); // emi
+console.log(nowServing(katzDeli)); // nobody
+
+///example:
+//nowServing(katzDeliLine); // "Currently serving Ada."
 
 /*3. Build a function `currentLine` that returns the current line. For example, if `katzDeliLine` is currently `["Ada", "Grace"]`, `currentLine(katzDeliLine)` would return `"The line is currently: 1. Ada 2. Grace"`.  If there is nobody in line, it should return `"The line is currently empty."*/
 
