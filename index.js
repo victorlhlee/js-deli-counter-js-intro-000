@@ -21,7 +21,7 @@ function takeANumber(katzDeliLine, name){
   return linePosition;
 }
 
-console.log(takeANumber(katzDeli, "Meisa"));
+console.log(takeANumber(katzDeli, "Meisa")); 
 console.log(takeANumber(katzDeli, "Nana"));
 console.log(takeANumber(katzDeli, "Emi"));
 
@@ -45,12 +45,30 @@ function nowServing(katzDeliLine){
 console.log(nowServing(katzDeli)); //meisa
 console.log(nowServing(katzDeli)); // nana
 console.log(nowServing(katzDeli)); // emi
-console.log(nowServing(katzDeli)); // nobody
+//console.log(nowServing(katzDeli)); // nobody
 
 ///example:
 //nowServing(katzDeliLine); // "Currently serving Ada."
 
 /*3. Build a function `currentLine` that returns the current line. For example, if `katzDeliLine` is currently `["Ada", "Grace"]`, `currentLine(katzDeliLine)` would return `"The line is currently: 1. Ada 2. Grace"`.  If there is nobody in line, it should return `"The line is currently empty."*/
+
+
+function currentLine(katzDeliLine){
+  if(katzDeliLine.length >= 1){
+    var position = "The line is currently ";
+    for(var i = 0; i<katzDeliLine.length; i++){
+      position += [i] + ". " + katzDeliLine[i] + " ";
+    }
+    return position;
+  }else{
+    return "The line is currently empty.";
+  }
+
+
+}
+console.log(currentLine(katzDeli));
+
+
 
 /*### Hint
 
